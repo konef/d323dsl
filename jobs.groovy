@@ -30,7 +30,7 @@ for(i=1; i<=4; i++){
             }
         publishers {
             archiveArtifacts {
-                pattern('${BRANCH_NAME}_dsl_script.tar.gz')
+                pattern('${BRANCH_NAME}_dsl_script.tar.gz, output.txt')
             }
         }
     }
