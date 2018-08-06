@@ -9,9 +9,9 @@ job ("MNTLAB-ukuchynski-main-build-job") {
             choiceType('CHECKBOX')
             groovyScript {
                 script('''return ["MNTLAB-ukuchynski-child1-build-job",
-"MNTLAB-ukuchynski-child2-build-job",
-"MNTLAB-ukuchynski-child3-build-job",
-"MNTLAB-ukuchynski-child4-build-job"]''')
+                "MNTLAB-ukuchynski-child2-build-job",
+                "MNTLAB-ukuchynski-child3-build-job",
+                "MNTLAB-ukuchynski-child4-build-job"]''')
             }
         }
     }
