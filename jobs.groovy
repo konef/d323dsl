@@ -27,7 +27,7 @@ job ("MNTLAB-{ikonev}-main-build-job") {
 
         downstreamParameterized {
 
-            trigger('MNTLAB-{ikonev}-child1-build-job, MNTLAB-{ikonev}-child2-build-job, MNTLAB-{ikonev}-child3-build-job, MNTLAB-{ikonev}-child4-build-job') {
+            trigger('$Next_job') {
 
                 block {
 
