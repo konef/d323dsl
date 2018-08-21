@@ -1,5 +1,3 @@
-def giturl = 'https://github.com/konef/d323dsl.git'
-
 job ("MNTLAB-{ikonev}-main-build-job") {
 
   	description("Лучшая main job ever")
@@ -36,7 +34,12 @@ job ("MNTLAB-{ikonev}-main-build-job") {
                     failure('FAILURE')
 
                     unstable('UNSTABLE')
-            }        
+            } 
+              parameters {
+
+                     currentBuildParameters()
+
+                }
          }
       }
    }
@@ -78,7 +81,7 @@ return gettags.text.readLines().collect {it.split()[1].replaceAll('refs/heads/',
      }
     steps {
                 shell('''bash script.sh > output.txt
-				tar -czf ikonev_dsl_script.tar.gz *''')
+				tar -czf ${BRANCH_NAME}_dsl_script.tar.gz *''')
             }
 				publishers {
 					archiveArtifacts {
